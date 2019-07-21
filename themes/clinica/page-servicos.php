@@ -1,5 +1,22 @@
 <?php get_header();?>
 
+<?php
+    $args = array(
+        'post_type' => 'servico',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do serviço
+        echo get_the_content() . "<br/>"; // textinho do serviço
+        echo get_the_post_thumbnail() . "<br/>"; // foto do servico
+        echo get_the_permalink() . "<br/>"; // link do servico interno
+
+    endwhile;
+    wp_reset_query();
+?>
+
 <section class="container-fluid servicos">
     <h2 class="font-weight-bold text-white text-center display-4">Serviços</h2>
    </section>

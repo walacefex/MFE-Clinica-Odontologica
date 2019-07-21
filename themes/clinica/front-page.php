@@ -1,5 +1,22 @@
 <?php get_header();?>
 
+
+<?php
+    $args = array(
+        'post_type' => 'bannerhome',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do banner
+        echo get_the_content() . "<br/>"; // textinho do banner
+        echo get_the_post_thumbnail() . "<br/>"; // foto do banner
+
+    endwhile;
+    wp_reset_query();
+?>
+
 <section class="container-fluid banner">
     <div class="row mx-auto d-flex align-items-center">
         <div class="col-12 col-md-8">
@@ -322,4 +339,4 @@
 
 </section>
 
-<?php get_footer(); ?>
+<?php get_footer();?>
