@@ -68,26 +68,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold border-right" href="#">Home <span class="sr-only">(Página atual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold border-right" href="#">Serviços</a>
-                </li>
-                 <li class="nav-item">
-                     <a class="nav-link font-weight-bold border-right" href="#">Quem Somos</a>
-                 </li>
-                  <li class="nav-item">
-                      <a class="nav-link font-weight-bold border-right" href="#">Dentistas</a>
-                  </li>
-                   <li class="nav-item">
-                       <a class="nav-link font-weight-bold border-right" href="#">Blog</a>
-                   </li>
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold border-right" href="#">Contato</a>
-                    </li>             
-            </ul>
+
+
+        <?php echo wp_nav_menu() ?>
+
+
+            
            <a href="#" title="Agende a sua consulta" class="text-principal text-decoration-none"> <div class="media border-bottom">
                 <i class="fas fa-mobile-alt" style="font-size: 45px; padding-top: 19px;"></i>
                 <div class="media-body ml-1">

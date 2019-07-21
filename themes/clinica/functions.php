@@ -29,9 +29,9 @@ require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
 // require_once get_template_directory() . '/core/classes/class-theme-options.php';
 // require_once get_template_directory() . '/core/classes/class-options-helper.php';
-// require_once get_template_directory() . '/core/classes/class-post-type.php';
+require_once get_template_directory() . '/core/classes/class-post-type.php';
 // require_once get_template_directory() . '/core/classes/class-taxonomy.php';
-// require_once get_template_directory() . '/core/classes/class-metabox.php';
+require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
 // require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
@@ -330,4 +330,74 @@ function scripts(){
 	wp_enqueue_script("bootstrapjs" , "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", array(), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'scripts' );
+
+/** POST TYPE Dentistas**/
+function dentista_cpt() {
+    $video = new Odin_Post_Type(
+        'Dentista', // Nome (Singular) do Post Type.
+        'dentista' // Slug do Post Type.
+    );
+
+    $video->set_labels(
+        array(
+            'menu_name' => __( 'Dentistas', 'odin' )
+        )
+    );
+
+    $video->set_arguments(
+        array(
+            'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'menu_icon' => 'dashicons-businessperson'
+        )
+    );
+}
+
+add_action( 'init', 'dentista_cpt', 1 );
+
+/** POST TYPE Serviços**/
+function servico_cpt() {
+    $video = new Odin_Post_Type(
+        'Serviço', // Nome (Singular) do Post Type.
+        'servico' // Slug do Post Type.
+    );
+
+    $video->set_labels(
+        array(
+            'menu_name' => __( 'Serviços', 'odin' )
+        )
+    );
+
+    $video->set_arguments(
+        array(
+            'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'menu_icon' => 'dashicons-lightbulb
+			'
+        )
+    );
+}
+
+add_action( 'init', 'servico_cpt', 1 );
+
+/** POST TYPE Banner home**/
+function banner_home_cpt() {
+    $video = new Odin_Post_Type(
+        'Banner', // Nome (Singular) do Post Type.
+        'bannerhome' // Slug do Post Type.
+    );
+
+    $video->set_labels(
+        array(
+            'menu_name' => __( 'Banners Home', 'odin' )
+        )
+    );
+
+    $video->set_arguments(
+        array(
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'menu_icon' => 'dashicons-images-alt2'
+        )
+    );
+}
+
+add_action( 'init', 'banner_home_cpt', 1 );
 
