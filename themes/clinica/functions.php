@@ -232,13 +232,13 @@ function odin_enqueue_scripts() {
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		// Bootstrap.
-		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
+		// wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
 
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
 
 		// Main jQuery.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+		// wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
 	} else {
 		// Grunt main file with Bootstrap, FitVids and others libs.
 		wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
@@ -324,5 +324,10 @@ function scripts(){
 	wp_enqueue_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' );
 	wp_enqueue_style('font-awesome.min' , 'https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 	wp_enqueue_style('bootstrapv4' , 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
+	wp_enqueue_script("jqueryv331" , "https://code.jquery.com/jquery-3.3.1.slim.min.js", array(), '', true );
+	wp_enqueue_script("popper" , "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js", array(), '', true );
+	wp_enqueue_script("bootstrapjs" , "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", array(), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'scripts' );
+
