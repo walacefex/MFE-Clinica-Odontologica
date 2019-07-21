@@ -1,0 +1,145 @@
+/*
+Theme Name: MFE Consultorio Odontológico
+Theme URI: http://mfeclinicasodontologicas.com.br/
+Author: the Walace Felix
+Author URI: http://walacefelix.com/
+Description: Tema desenvolvido para Clinica de odontológia MFE CLinicas Odontológicas
+Version:1.0
+*/
+
+body, h1, h2, h3, h4, h5, p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-transparent{background: transparent !important;}
+.bg-principal{
+    background-color: #0e1d3c;
+}
+.titulo-logo {
+    font-size: 25px;
+    align-self: center;
+}
+
+.text-principal{
+    color: #0e1d3c;
+}
+.text-azulclaro{
+    color: #00ccff;
+}
+.bg-azulclaro{
+    background-color: #00ccff;
+
+}
+.logo{
+    width: 80px;
+    height: auto;
+}
+.agende{
+        font-size: 13px;
+    white-space: pre-line;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.banner{
+    background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height:800px;
+    background-size: cover;
+    background-position: 0;
+}
+
+
+.btn-outline-azulclaro{
+    color: #00ccff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #00ccff;
+}
+
+.btn-outline-azulclaro:hover {
+    color: #fff;
+    background-color: #00ccff;
+    border-color: #00ccff;
+}
+.rounded {
+    border-radius: .50rem!important;
+}
+
+.separador{
+    background-image: url(img/barra-separacao.png);
+    width: 100%;
+    height: 20px;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+
+.fundo-azul-gradiente{
+    background-image: url(img/fundo-gradiente.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: #0049d6; */
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    background-position: 50%;
+}
+
+.bg-cinza{
+    background-color: #ebf1f6;
+}
+.agendar-consulta{
+    background-color: #3db8db;
+}
+.time{
+    background-color: #9b9fa0;
+    height: 250px;
+}
+.comentario{
+    background-image: url(img/comentario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+}
+.comentario-img{
+    width:75px;
+    height: 70px;
+}
+.estrutura-carrosel{
+    height: 400px;
+    position: relative;
+    top: 100px;
+    color: white
+}
+
+.contato{
+    background-image: url(img/contato.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+         display: flex;
+    justify-content: center;
+    align-items: center;
+  background-position: 0 -70px;
+
+}
+
+.servicos{
+    background-image: url(img/servicos-main.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+
+}
