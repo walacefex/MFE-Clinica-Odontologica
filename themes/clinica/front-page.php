@@ -1,5 +1,22 @@
 <?php get_header();?>
 
+
+<?php
+    $args = array(
+        'post_type' => 'bannerhome',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do banner
+        echo get_the_content() . "<br/>"; // textinho do banner
+        echo get_the_post_thumbnail() . "<br/>"; // foto do banner
+
+    endwhile;
+    wp_reset_query();
+?>
+
 <section class="container-fluid banner">
     <div class="row mx-auto d-flex align-items-center">
         <div class="col-12 col-md-8">
@@ -23,6 +40,23 @@
  py-3">
     <h2 class="font-weight-bold text-uppercase">Nossos <span class="text-azulclaro">Serviços</span></h2>
 </div>
+
+<?php
+    $args = array(
+        'post_type' => 'servico',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do serviço
+        echo get_the_content() . "<br/>"; // textinho do serviço
+        echo get_the_post_thumbnail() . "<br/>"; // foto do servico
+        echo get_the_permalink() . "<br/>"; // link do servico interno
+
+    endwhile;
+    wp_reset_query();
+?>
 <div class="row mx-auto">
         <div class="fundo-azul-gradiente col-6 col-md-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/implantes.png" class="img-fluid py-lg-4 py-md-4 py-2 border-bottom" alt="Implates">
@@ -143,6 +177,22 @@
         <h2 class="font-weight-bold text-uppercase">Nosso <span class="text-azulclaro">Time</span></h2>
     </div>
     <div class="row">
+    <?php
+    $args = array(
+        'post_type' => 'dentista',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do dentista
+        echo get_the_content() . "<br/>"; // textinho do dentista
+        echo get_the_post_thumbnail() . "<br/>"; // foto do dentista
+        echo get_the_permalink() . "<br/>"; // link do dentista
+
+    endwhile;
+    wp_reset_query();
+?>
 
         <div class="col-md-3">
             <div class="card border-0">
@@ -191,6 +241,25 @@
 
 </section>
 <!-- comentário   -->
+
+
+<?php
+    $args = array(
+        'post_type' => 'depoimento',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do depoimento
+        echo get_the_content() . "<br/>"; // textinho do depoimento
+        echo get_the_post_thumbnail() . "<br/>"; // foto do depoimento
+
+    endwhile;
+    wp_reset_query();
+?>
+
+
 <section class="container-fluid comentario">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -249,6 +318,25 @@
     <div class="row py-3">
         <h2 class="font-weight-bold text-uppercase">BLOG </h2>
     </div>
+
+    <?php
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+    );
+    $posts = new WP_Query($args);
+    while ($posts->have_posts()): $posts->the_post();
+
+        echo get_the_title() . "<br/>"; // titulo do blog
+        echo get_the_content() . "<br/>"; // textinho do blog
+        echo get_the_post_thumbnail() . "<br/>"; // foto do blog
+        echo get_the_permalink() . "<br/>"; // link do blog
+
+    endwhile;
+    wp_reset_query();
+?>
+
+
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iure reiciendis architecto obcaecati sunt odio repellendus facere, quisquam expedita consectetur cumque, quam debitis, ipsam doloremque itaque ducimus rerum id fuga!</p>
 
     <article class="row mx-auto">
@@ -322,4 +410,4 @@
 
 </section>
 
-<?php get_footer(); ?>
+<?php get_footer();?>

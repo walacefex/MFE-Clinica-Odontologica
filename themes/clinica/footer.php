@@ -33,11 +33,7 @@
 </div>
 <div class="col-md-4 col-12">
     <h5 class="text-white font-weight-bold">Mapa do Site</h5>
-    <a href="">Home</a>
-    <a href="">Quem Somos</a>
-    <a href="">Serviços</a>
-    <a href="">Contato</a>
-    <a href="">Blog</a>
+    <?php echo wp_nav_menu() ?>
 </div>
 <div class="col-md-4 col-12">
     <h5 class="text-white font-weight-bold">Serviços</h5>
